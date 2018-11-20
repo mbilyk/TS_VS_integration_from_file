@@ -1,0 +1,9 @@
+<PropertyGroup name='Voltage Test' id='EB58D851-1FE1-450D-8843-C618945A5583'>,,,,
+<Sequence>,<Category>,<PropertyLookup>,<Value>,
+MainSequence,Test A,Limits,Low,High
+MainSequence,Test A,{ContainerValues},9.5,10.5
+MainSequence,System Self Test,Limits.String,SYSTEM OK,
+MainSequence,Set A and B,VeriStand.ValuesToSet {Number [0] .. [1]},,
+MainSequence,Set A and B,Veristand.ValuesToSet[0],3,
+MainSequence,Set A and B,Veristand.ValuesToSet[1],4,
+<PropertyGroup>,,,,

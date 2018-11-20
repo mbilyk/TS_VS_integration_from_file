@@ -1,0 +1,89 @@
+<PropertyGroup name='Group 1' id='b207cb62-4ea1-4c2e-8224-b7a8058f755e' description='Description for Group 1'>
+<Sequence>,<Category>,<PropertyLookup>,<Value>
+MainSequence,Set A and B,VeriStand {Container},Timeout_ms {Number}
+MainSequence,Set A and B,{ContainerValues},-1
+MainSequence,Set A and B,VeriStand.ValuesToSet {Number [0] .. [1]}
+MainSequence,Set A and B,VeriStand.ValuesToSet[0],1
+MainSequence,Set A and B,VeriStand.ValuesToSet[1],2
+MainSequence,Set A and B,VeriStand.ChannelNames {String [0] .. [1]}
+MainSequence,Set A and B,VeriStand.ChannelNames[0],Targets/Controller/Simulation Models/Models/Add/Inports/A
+MainSequence,Set A and B,VeriStand.ChannelNames[1],Targets/Controller/Simulation Models/Models/Add/Inports/B
+MainSequence,Set A and B,Result {Container},Status {String},ReportText {String}
+MainSequence,Set A and B,{ContainerValues},,
+MainSequence,Set A and B,Result.Error {Error},Code {Number},Msg {String},Occurred {Boolean}
+MainSequence,Set A and B,{ContainerValues},0,,False
+MainSequence,Set A and B,Result.Veristand {Container},Timeout {Boolean}
+MainSequence,Set A and B,{ContainerValues},False
+MainSequence,Set A and B,Result.Veristand.Units {String [0] .. [9]}
+MainSequence,Set A and B,Result.Veristand.Units[0],
+MainSequence,Set A and B,Result.Veristand.Units[1],
+MainSequence,Set A and B,Result.Veristand.Units[2],
+MainSequence,Set A and B,Result.Veristand.Units[3],
+MainSequence,Set A and B,Result.Veristand.Units[4],
+MainSequence,Set A and B,Result.Veristand.Units[5],
+MainSequence,Set A and B,Result.Veristand.Units[6],
+MainSequence,Set A and B,Result.Veristand.Units[7],
+MainSequence,Set A and B,Result.Veristand.Units[8],
+MainSequence,Set A and B,Result.Veristand.Units[9],
+MainSequence,Get A+B,Veristand {Container},ValueToSet {Expression},ChannelName {Expression}
+MainSequence,Get A+B,{ContainerValues},0,"""Targets/Controller/Simulation Models/Models/Add/Outports/A+B"""
+MainSequence,Get A+B,Result {Container},Units {String},Numeric {Number},Status {String},ReportText {String}
+MainSequence,Get A+B,{ContainerValues},,0,,
+MainSequence,Get A+B,Result.Error {Error},Code {Number},Msg {String},Occurred {Boolean}
+MainSequence,Get A+B,{ContainerValues},0,,False
+MainSequence,Get A+B,Result.Veristand {Container},ChannelUnit {String},ChannelName {String},Description {String}
+MainSequence,Get A+B,{ContainerValues},,,
+MainSequence,Channel Value Limit Test,Veristand {Container},ValueToSet {Expression},ChannelName {Expression}
+MainSequence,Channel Value Limit Test,{ContainerValues},0,"""Targets/Controller/Simulation Models/Models/Add/Outports/A+B"""
+MainSequence,Channel Value Limit Test,Result {Container},Status {String},Numeric {Number},ReportText {String},Units {String}
+MainSequence,Channel Value Limit Test,{ContainerValues},,0,,
+MainSequence,Channel Value Limit Test,Result.Veristand {Container},ChannelName {String},Description {String}
+MainSequence,Channel Value Limit Test,{ContainerValues},,
+MainSequence,Channel Value Limit Test,Result.Error {Error},Code {Number},Msg {String},Occurred {Boolean}
+MainSequence,Channel Value Limit Test,{ContainerValues},0,,False
+MainSequence,Channel Value Limit Test,Limits {Container},UseNominalExpr {Boolean},UseThresholdTypeExpr {Boolean},Nominal {Number},NominalExpr {Expression},ThresholdTypeExpr {Expression},ThresholdType {String},Low {Number},High {Number},LowExpr {Expression},HighExpr {Expression},UseLowExpr {Boolean},UseHighExpr {Boolean}
+MainSequence,Channel Value Limit Test,{ContainerValues},False,False,100,,,PERCENTAGE,7,4,,,False,False
+MainSequence,Channel Value Limit Test,Comp {String},EQ
+MainSequence,Channel Value Limit Test,CompExpr {Expression},
+MainSequence,Channel Value Limit Test,UseCompExpr {Boolean},False
+MainSequence,Channel Value Limit Test,InBuf {String},
+MainSequence,Channel Value Limit Test,DataSource {Expression},Step.Result.Numeric
+MainSequence,Set Channel Value,Veristand {Container},Timeout_ms {Number},ValueToSet {Expression},ChannelName {Expression}
+MainSequence,Set Channel Value,{ContainerValues},-1,0,
+MainSequence,Set Channel Value,Result {Container},Status {String},ReportText {String}
+MainSequence,Set Channel Value,{ContainerValues},,
+MainSequence,Set Channel Value,Result.Error {Error},Code {Number},Msg {String},Occurred {Boolean}
+MainSequence,Set Channel Value,{ContainerValues},0,,False
+MainSequence,Set Channel Value,Result.Veristand {Container},Unit {String},ValueToSet {Number},ChannelName {Expression},Timeout {Boolean}
+MainSequence,Set Channel Value,{ContainerValues},,0,,False
+MainSequence,Test A,Result {Container},Status {String},Numeric {Number},ReportText {String},Units {String}
+MainSequence,Test A,{ContainerValues},,0,,
+MainSequence,Test A,Result.Error {Error},Code {Number},Msg {String},Occurred {Boolean}
+MainSequence,Test A,{ContainerValues},0,,False
+MainSequence,Test A,Limits {Container},ThresholdType {String},Nominal {Number},Low {Number},High {Number},ThresholdTypeExpr {Expression},NominalExpr {Expression},LowExpr {Expression},HighExpr {Expression},UseThresholdTypeExpr {Boolean},UseNominalExpr {Boolean},UseLowExpr {Boolean},UseHighExpr {Boolean}
+MainSequence,Test A,{ContainerValues},PERCENTAGE,100,9,11,,,,,False,False,False,False
+MainSequence,Test A,Comp {String},GELE
+MainSequence,Test A,CompExpr {Expression},
+MainSequence,Test A,UseCompExpr {Boolean},False
+MainSequence,Test A,InBuf {String},
+MainSequence,Test A,DataSource {Expression},Step.Result.Numeric
+MainSequence,System Self Test,Result {Container},Status {String},String {String},ReportText {String}
+MainSequence,System Self Test,{ContainerValues},,,
+MainSequence,System Self Test,Result.Error {Error},Code {Number},Msg {String},Occurred {Boolean}
+MainSequence,System Self Test,{ContainerValues},0,,False
+MainSequence,System Self Test,Limits {Container},String {String},StringExpr {Expression},UseStringExpr {Boolean}
+MainSequence,System Self Test,{ContainerValues},,,False
+MainSequence,System Self Test,Comp {String},IgnoreCase
+MainSequence,System Self Test,CompExpr {Expression},
+MainSequence,System Self Test,UseCompExpr {Boolean},False
+MainSequence,System Self Test,InBuf {String},
+MainSequence,System Self Test,DataSource {Expression},Step.Result.String
+MainSequence,Initialize VeriStand,Result {Container},Status {String},ReportText {String}
+MainSequence,Initialize VeriStand,{ContainerValues},,
+MainSequence,Initialize VeriStand,Result.Error {Error},Code {Number},Msg {String},Occurred {Boolean}
+MainSequence,Initialize VeriStand,{ContainerValues},0,,False
+MainSequence,Initialize VeriStand,Result.Veristand {Container},Project {String}
+MainSequence,Initialize VeriStand,{ContainerValues},
+MainSequence,Initialize VeriStand,Veristand {Container},OpenVSTimeout {Number},ShowProgress {Boolean},Visible {Expression},username {Expression},password {Expression}
+MainSequence,Initialize VeriStand,{ContainerValues},120,False,True,"""""",""""""
+<PropertyGroup>
